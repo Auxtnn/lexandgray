@@ -118,8 +118,7 @@ const Hero = () => {
             variants={itemVariants}
             className="mb-8 max-w-lg text-lg font-light text-gray-300 md:text-xl"
           >
-            Where legal excellence meets modern professionalism in the heart of
-            Port Harcourt
+            Where legal excellence meets modern professionalism
           </motion.p>
 
           {/* Latin Quote with decorative elements */}
