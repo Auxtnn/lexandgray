@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   Phone,
@@ -250,26 +253,32 @@ export function Footer() {
 
       {/* "Back to top" button */}
       <div className="fixed bottom-6 right-6 z-40">
-        <button
-          // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="bg-desert-sand hover:bg-ash-gray text-white rounded-full p-3 shadow-lg transition-colors duration-300"
-          aria-label="Back to top"
+        <motion.a
+          href="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 bg-desert-sand hover:bg-ash-gray rounded-full p-4 shadow-lg z-50"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
+            width="28"
+            height="28"
             viewBox="0 0 24 24"
-            stroke="currentColor"
+            fill="white"
+            stroke="white"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-message-circle"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 15l7-7 7 7"
-            />
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
           </svg>
-        </button>
+        </motion.a>
       </div>
     </footer>
   );

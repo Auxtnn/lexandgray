@@ -64,7 +64,7 @@ export function CoreValues() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: (index) => ({
+    visible: (index: number) => ({
       opacity: 1,
       y: 0,
       transition: {
